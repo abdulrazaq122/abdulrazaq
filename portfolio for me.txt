@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irfans Pooortfolio | Pro</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    color:white;
+    transition:0.4s;
+    overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* DARK LIGHT MODE */
+.light-mode{
+    background:#f4f4f4;
+    color:#111;
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#00f7ff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{color:#00f7ff;}
+
+.toggle{
+    cursor:pointer;
+    font-size:18px;
+    margin-left:20px;
+}
+
+/* MOBILE MENU */
+.menu-btn{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    nav ul{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#111;
+        flex-direction:column;
+        width:200px;
+        display:none;
+        padding:20px;
+    }
+    nav ul.show{display:flex;}
+    .menu-btn{display:block;}
+}
+
+/* SECTIONS */
+section{
+    min-height:100vh;
+    padding:120px 10%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+/* HERO */
+.hero h1{font-size:48px;}
+.hero span{color:#00f7ff;}
+.typing{font-size:24px;margin-top:15px;height:30px;}
+
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    background:#00f7ff;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+.btn:hover{background:white;}
+
+/* SKILLS */
+.skill{
+    width:300px;
+    margin:15px 0;
+    text-align:left;
+}
+.skill-bar{
+    height:8px;
+    background:#444;
+    border-radius:10px;
+    overflow:hidden;
+}
+.skill-progress{
+    height:100%;
+    width:0;
+    background:#00f7ff;
+    transition:1.5s;
+}
+
+/* PROJECTS */
+.project-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.card{
+    width:280px;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    background:rgba(255,255,255,0.2);
+}
+
+/* CONTACT */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:300px;
+    margin-top:20px;
+}
+form input,form textarea{
+    padding:10px;
+    border:none;
+    border-radius:8px;
+}
+form button{
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#00f7ff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Irfans Pooortfolio</div>
+<div class="menu-btn">?</div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+<li class="toggle">??</li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<h1>Welcome to <span>Irfans Pooortfolio</span></h1>
+<h2 class="typing"></h2>
+<a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p style="max-width:700px;margin-top:20px;">
+Hi, I'm Irfan. I build powerful, stylish and modern websites.
+I love animations, responsive design and professional UI.
+</p>
+</section>
+
+<section id="skills">
+<h2>My Skills</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+</div>
+
+</section>
+
+<section id="projects">
+<h2>My Projects</h2>
+<div class="project-container">
+<div class="card"><h3>Modern Website</h3><p>Responsive and animated website.</p></div>
+<div class="card"><h3>Dynamic App</h3><p>Interactive JavaScript application.</p></div>
+<div class="card"><h3>Creative Portfolio</h3><p>Professional UI design project.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+© 2026 Irfans Pooortfolio | Pro Version
+</footer>
+
+<script>
+// Typing Effect
+const typingElement=document.querySelector(".typing");
+const texts=["Web Developer","UI/UX Designer","Freelancer"];
+let textIndex=0,charIndex=0;
+
+function typeEffect(){
+if(charIndex<texts[textIndex].length){
+typingElement.textContent+=texts[textIndex].charAt(charIndex);
+charIndex++;
+setTimeout(typeEffect,100);
+}else{setTimeout(eraseEffect,1000);}
+}
+function eraseEffect(){
+if(charIndex>0){
+typingElement.textContent=texts[textIndex].substring(0,charIndex-1);
+charIndex--;
+setTimeout(eraseEffect,50);
+}else{
+textIndex=(textIndex+1)%texts.length;
+setTimeout(typeEffect,500);
+}}
+document.addEventListener("DOMContentLoaded",typeEffect);
+
+// Dark Mode Toggle
+document.querySelector(".toggle").onclick=()=>{
+document.body.classList.toggle("light-mode");
+};
+
+// Mobile Menu
+document.querySelector(".menu-btn").onclick=()=>{
+document.querySelector("nav ul").classList.toggle("show");
+};
+
+// Skills Animation
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".skill-progress").forEach(bar=>{
+let rect=bar.getBoundingClientRect();
+if(rect.top<window.innerHeight){
+bar.style.width=bar.dataset.width;
+}
+});
+});
+</script>
+
+</body>
+</html>
